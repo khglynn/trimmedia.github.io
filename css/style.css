@@ -191,6 +191,10 @@ img{
 	text-align: center;
 }
 
+.project__image + .project__image{
+	margin-top: 2em;
+}
+
 .project__image img{
 	width: 100%;
 	border-radius: 10px;
