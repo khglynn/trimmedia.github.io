@@ -1,126 +1,24 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
- 	<title>Trimm - Home</title>
- 	<link rel="stylesheet" href="css/normalize.css"/>
- 	<link rel="stylesheet" href="css/skeleton.css"/>
- 	<link rel="stylesheet" href="css/style.css"/>
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<script src="//use.typekit.net/ani3ymi.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-</head>
-
-<body>
-	<header>
-		<div class="row container"> 
-			<h1 class="two columns">
-				<a href="/" class="logo">
-					<img src="img/logo.gif" alt="Trim Media LLC"/>
-				</a>
-			</h1>
-			<nav class="ten columns">
-				<ul class="nav-links serif">
-					<li><a href="/about">About</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
-	<main>
-		<section class="definition">
-			<div class="row container">
-				<div class="eight columns">
-					<section>
-						<h2 class="red">Trim <span>(adjective)</span></h2>
-						<h3 class="serif">Neat and smart in appearance.</h3>
-						<p><em>"Their branding is tight and trim."</em></p>
-					</section>
-					<section>
-						<h2 class="red">Trimm <span>(proper noun)</span></h2>
-						<h3 class="serif">A tiny creative firm that delivers fresh ideas and timeless experiences.</h3>
-						<p><em>"Trim Media LLC"</em></p>
-					</section>
-				</div>
-			</div>
-		</section>
-
-		<section class="featured-projects">
-			<h1 class="red serif container">Projects</h1>
-			<div class="project-list">
-				<div class="row container">
-					<article class="twelve columns">
-						<a class="project" href="/projects/ffc" style="background-image: url(../img/p2.jpg)">
-							<div class="project__info  one-half column">
-								<p class="project__client">
-									Fancy Footage Club
-								</p>
-								<h2>Empowering designers to embrace video in their work.</h2>
-							</div>
-						</a>
-					</article>
-				</div>
-				<div class="row container">
-					<article class="one-half column">
-						<a class="project" href="/projects/jimmy-ventura" style="background-image: url(../img/p1.jpg)">
-							<div class="project__info">
-								<p class="project__client">Jimmy Ventura</p>
-								<h2>Crafting a brand for a modern musician.</h2>
-							</div>
-						</a>
-					</article>
-
-					<article class="one-half column">
-						<a class="project" href="/projects/nater-law" style="background-image: url(../img/p3.jpg)">
-							<div class="project__info">
-								<p class="project__client">Nater Law</p>
-								<h2>Exploring the potential of a modern legal brand.</h2>
-							</div>
-						</a>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<section class="about">
-			<div class="row container">
-				<h2 class="serif huge">
-					Let's talk about you...<br/>
-					And us...<br/>
-					And your audience...<br/>
-				</h2>
-				<p>
-					Every piece of work we create is for the people who will experience it. Where we work in partnership with our clients to shape brands that celebrate their values and craft experiences that are worth having.<br/>
-					<br/>
-					Or better yet, experiences worth <em>remembering</em>.
-				</p>
-			</div>
-		</section>
-
-		<section class="cta">
-			<div class="row container">
-				<a href="/contact" class="button button-primary">Get in touch!</a>
-			</div>
-		</section>
-	</main>
-
-	<footer>
-		<div class="row container">
-			<div class="five columns">
-				<p class="gray copyright">© 2015 Trim Media LLC</p>
-			</div>
-			<nav class="seven columns">
-				<ul class="nav-links serif">
-					<li><a href="/about">About</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</footer>
-</body>
-
-</html>
+---
+layout: default
+---
+<div class="project-list">
+  {% for project in site.data.projects %}
+    <section class="project-item">
+      {% assign loopindex = forloop.index | modulo: 2 %}
+      {% if loopindex == 1 %}
+      <div class="row -reverse">
+      {% else %}
+      <div class="row">
+      {% endif %}
+        <div class="column two-thirds">
+          <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
+        </div>
+        <div class="column third">
+          <h3 class="subheader">{{ project.name }}</h2>
+          <p class="text">{{ project.blurb }}</p>
+          <a href="{{ project.url }}" class="cta">Learn More</a>
+        </div>
+      </div><!-- end .row -->
+    </section><!-- end .project-item -->
+  {% endfor %}
+</div><!-- end .project-list -->

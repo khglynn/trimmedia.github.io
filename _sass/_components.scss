@@ -1,0 +1,143 @@
+/* 
+Components
+*/
+
+.main-header{
+	> .logo{
+		width: 50%;
+		max-width: 10rem;
+		padding-top: $spacing-unit;
+	}
+	> .title{
+		font-size: 2.25em;
+		line-height: 1em;
+		font-weight: normal;
+		padding-top: $spacing-unit * 2;
+	}
+	> .subtitle{
+		padding: 0 1em;
+		padding-top: $spacing-unit * 2;
+		text-align: left;
+		font-size: .875em;
+		line-height: $line-height;
+		font-weight: lighter;
+	}
+}
+
+.project-list{
+	padding-top: $spacing-unit * 2;
+}
+
+.project-item{
+	padding-top: $spacing-unit;
+	text-align: left;
+	@include media-query($laptop) {
+		font-size: .75rem;
+		line-height: 1.5em;
+	}
+
+	& .subheader, .text{
+		padding-top: $spacing-unit / 2;
+	}
+	& .subheader{
+		font-size: 1.25em;
+		font-style: italic;
+	}
+	& .text{
+		font-size: .75em;
+	}
+	& .cta{
+		display: block;
+		margin-top: $spacing-unit / 2;
+		padding: .5em;
+		width: 50%;
+		text-align: center;
+		font-size: .75em;
+		font-weight: bold;
+		color: inherit;
+		border-radius: $border-radius;
+		border: 2px solid $text-color;
+		&:hover,:active{
+			background: $text-color;
+			color: $bg-color;
+		}
+	}
+}
+
+.main-footer{
+	padding-top: $spacing-unit * 2;
+	padding-bottom: $spacing-unit;
+	
+	> .header, .text{font-weight: normal;}
+
+	> .header{
+		font-size: 1.75em;
+		line-height: 1em;
+	}
+	> .text{
+		padding-top: $spacing-unit / 2;
+		font-size: .75em;
+		line-height: $line-height;
+	}
+	> form + .text{
+		padding-top: $spacing-unit;
+	}
+	> .cta{
+		padding-top: $spacing-unit / 4;
+	}
+	> .copyright{
+		display: block;
+		padding-top: $spacing-unit;
+		font-size: .625em;
+		color: #9f9f9f;
+	}
+}
+
+.contact-form{
+	font-size: .75em;
+	max-width: 20rem;
+	margin: 0 auto;
+
+	& label{
+		display: block;
+		padding-top: $spacing-unit / 2;
+		color: #9f9f9f;
+		cursor: pointer;
+	}
+	& input, textarea{
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: $spacing-unit / 4;
+		padding: .75em;
+		border-radius: $border-radius;
+		font-size: inherit;
+		background-color: #e6e6e6;
+		border: 2px solid transparent;
+		transition: .3s ease;
+		transition-property: background border;
+
+		&:focus{
+			outline: none;
+			border-color: #7ec3e1;
+			background-color: $bg-color;
+		}
+
+		&[type='submit']{
+			margin-top: $spacing-unit / 2; 
+			background: $bg-color;
+			border-color: $primary-color;
+			color: $primary-color;
+			font-weight: bold;
+			cursor: pointer;
+			&:hover,:active{
+				background: $primary-color;
+				color: $bg-color;
+			}
+		}
+	}
+}
+
+
+
+

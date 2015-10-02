@@ -1,0 +1,15 @@
+# Site settings
+title: 'Trim Media LLC | Branding & Product Design'
+email: info@trim.media
+description: > # this means to ignore newlines until "baseurl:"
+  We are Trimm and we're passionate about building products and brands in 
+  collaboration with people who make the world a better place.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://trim.media" # the base hostname & protocol for your site
+twitter_username: 
+github_username: trimmedia
+
+# Build settings
+markdown: kramdown
+
+exclude: ['node_modules','package.json','gruntfile.js']

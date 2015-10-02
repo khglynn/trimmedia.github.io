@@ -1,0 +1,53 @@
+/* 
+Objects
+*/
+
+.container{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	@include media-query($tablet) {
+		width: 80%;
+	}
+	@include media-query($laptop) {
+		width: 70%;
+	}
+	@include media-query($desktop) {
+		width: 60%;
+	}
+}
+
+.row{
+	&:before, &:after{
+		content: " ";
+		display: table;
+	}
+
+	&:after{
+		clear: both;
+	}
+
+	@include media-query($laptop) {
+    	> .column{
+    		float: left;
+    		&.full { width: 100%; }
+	  		&.two-thirds { width: 66.7%; }
+			&.half { width: 50%; }
+			&.third { width: 33.3%; }
+			&.fourth { width: 25%; }	
+    	}
+	}
+
+	&.-reverse{ 
+		> .column{
+			float: right; 
+		}
+	}
+
+}
+
+
+
+
+

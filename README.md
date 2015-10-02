@@ -1,2 +1,1 @@
-# trimmedia
-Website for Trim Media LLC
+# Trim Media LLC Website
