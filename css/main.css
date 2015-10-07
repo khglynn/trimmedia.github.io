@@ -169,7 +169,8 @@ Components
   .main-footer > .text {
     padding-top: 1.25rem;
     font-size: .75em;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    font-weight: lighter; }
   .main-footer > form + .text {
     padding-top: 2.5rem; }
   .main-footer > .cta {
@@ -181,7 +182,7 @@ Components
     color: #9f9f9f; }
 
 .contact-form {
-  font-size: .75em;
+  font-size: .625em;
   max-width: 20rem;
   margin: 0 auto; }
   .contact-form label {
