@@ -28,7 +28,7 @@ Objects
 		clear: both;
 	}
 
-	@include media-query($laptop) {
+	@include media-query($tablet) {
     	> .column{
     		float: left;
     		&.full { width: 100%; }
@@ -37,11 +37,11 @@ Objects
 			&.third { width: 33.3%; }
 			&.fourth { width: 25%; }	
     	}
-	}
 
-	&.-reverse{ 
-		> .column{
-			float: right; 
+    	&.-reverse{ 
+			> .column{
+				float: right; 
+			}
 		}
 	}
 

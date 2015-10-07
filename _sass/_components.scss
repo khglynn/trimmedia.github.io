@@ -7,16 +7,19 @@ Components
 		width: 50%;
 		max-width: 10rem;
 		padding-top: $spacing-unit;
+		@include media-query($laptop){
+			padding-top: $spacing-unit * 2;
+		}
 	}
 	> .title{
 		font-size: 2.25em;
 		line-height: 1em;
 		font-weight: normal;
-		padding-top: $spacing-unit * 2;
+		padding-top: $spacing-unit;
 	}
 	> .subtitle{
 		padding: 0 1em;
-		padding-top: $spacing-unit * 2;
+		padding-top: $spacing-unit;
 		text-align: left;
 		font-size: .875em;
 		line-height: $line-height;
@@ -31,15 +34,50 @@ Components
 .project-item{
 	text-align: left;
 
-	@include media-query($laptop) {
+	& .preview-parent{
+		height: 390px;
+		position: relative;
+	}
+
+	& .preview{
+		height: 100%;
+		max-width: none;
+		position: absolute;
+		left: 0;
+	}
+
+	& .subheader{
+		font-size: 1.25em;
+		font-style: italic;
+	}
+	& .text{
+		font-size: .75em;
+		padding-top: $spacing-unit / 2;
+	}
+	& .cta{
+		display: inline-block;
+		margin-top: $spacing-unit / 2;
+		padding: .15em 1.5em;
+		text-align: center;
+		font-size: .75em;
+		font-weight: bold;
+		color: inherit;
+		border-radius: $border-radius;
+		border: 2px solid $text-color;
+
+		&:hover,:active{
+			background: $text-color;
+			color: $bg-color;
+		}
+	}
+
+	@include media-query($tablet) {
 		font-size: .75rem;
 		line-height: 1.5em;
-		height: 90vh;
-		min-height: 20em;
 
 		& .preview-parent, .info-parent{
 			position: relative;
-			height: 90vh;			
+			height: 585px;			
 		}
 
 		& .info{
@@ -53,35 +91,24 @@ Components
 			max-width: none;
 			position: absolute;
 			right: 0;
+			left: auto;
+			transition: transform .6s ease;
+			&:hover{
+				transform: translateX(10%) rotate(5deg);
+			}
 		}
 
 		& .row.-reverse .preview{
 			left: 0;
+			&:hover{
+				transform: translateX(-10%) rotate(-5deg);
+			}
 		}
 	}
 
-	& .subheader{
-		font-size: 1.25em;
-		font-style: italic;
-	}
-	& .text{
-		font-size: .75em;
-		padding-top: $spacing-unit / 2;
-	}
-	& .cta{
-		display: block;
-		margin-top: $spacing-unit / 2;
-		padding: .5em;
-		width: 50%;
-		text-align: center;
-		font-size: .75em;
-		font-weight: bold;
-		color: inherit;
-		border-radius: $border-radius;
-		border: 2px solid $text-color;
-		&:hover,:active{
-			background: $text-color;
-			color: $bg-color;
+	@include media-query($laptop) {
+		& .preview-parent, .info-parent{
+			height: 780px;			
 		}
 	}
 }
