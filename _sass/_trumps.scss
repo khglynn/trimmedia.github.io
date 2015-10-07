@@ -2,6 +2,8 @@
 Trumps & Hacks 
 */
 
-.u-nowrap{
-	white-space: nowrap;
+@include media-query($laptop) {
+	.u-nowrap{
+		white-space: nowrap;
+	}
 }

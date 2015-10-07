@@ -10,13 +10,15 @@ layout: default
       {% else %}
       <div class="row">
       {% endif %}
-        <div class="column two-thirds">
+        <div class="column two-thirds preview-parent">
           <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
         </div>
-        <div class="column third">
-          <h3 class="subheader">{{ project.name }}</h2>
-          <p class="text">{{ project.blurb }}</p>
-          <a href="{{ project.url }}" class="cta">Learn More</a>
+        <div class="column third info-parent">
+          <div class="info">
+            <h3 class="subheader">{{ project.name }}</h2>
+            <p class="text">{{ project.blurb }}</p>
+            <a href="{{ project.url }}" class="cta">Learn More</a>
+          </div>
         </div>
       </div><!-- end .row -->
     </section><!-- end .project-item -->

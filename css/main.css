@@ -40,10 +40,15 @@ button {
 /* 
 Base 
 */
+html {
+  overflow: hidden;
+  overflow-y: scroll; }
+
 body {
   background: #fafafa;
   color: #31332e;
-  text-align: center; }
+  text-align: center;
+  overflow-x: hidden; }
 
 h1, h2, h3 {
   font-family: "kepler-std-display", serif; }
@@ -127,22 +132,38 @@ Components
   font-weight: lighter; }
 
 .project-list {
-  padding-top: 5rem; }
+  padding-top: 2.5rem; }
 
 .project-item {
-  padding-top: 2.5rem;
   text-align: left; }
   @media screen and (min-width: 900px) {
     .project-item {
       font-size: .75rem;
-      line-height: 1.5em; } }
-  .project-item .subheader, .project-item .text {
-    padding-top: 1.25rem; }
+      line-height: 1.5em;
+      height: 90vh;
+      min-height: 20em; }
+      .project-item .preview-parent, .project-item .info-parent {
+        position: relative;
+        height: 90vh; }
+      .project-item .info {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+      .project-item .preview {
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        right: 0; }
+      .project-item .row.-reverse .preview {
+        left: 0; } }
   .project-item .subheader {
     font-size: 1.25em;
     font-style: italic; }
   .project-item .text {
-    font-size: .75em; }
+    font-size: .75em;
+    padding-top: 1.25rem; }
   .project-item .cta {
     display: block;
     margin-top: 1.25rem;
@@ -214,7 +235,8 @@ Components
       border-color: #d24444;
       color: #d24444;
       font-weight: bold;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-appearance: none; }
       .contact-form input[type='submit']:hover, .contact-form input[type='submit'] :active, .contact-form textarea[type='submit']:hover, .contact-form textarea[type='submit'] :active {
         background: #d24444;
         color: #fafafa; }
@@ -222,5 +244,6 @@ Components
 /* 
 Trumps & Hacks 
 */
-.u-nowrap {
-  white-space: nowrap; }
+@media screen and (min-width: 900px) {
+  .u-nowrap {
+    white-space: nowrap; } }

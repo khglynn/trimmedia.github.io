@@ -25,26 +25,48 @@ Components
 }
 
 .project-list{
-	padding-top: $spacing-unit * 2;
+	padding-top: $spacing-unit;
 }
 
 .project-item{
-	padding-top: $spacing-unit;
 	text-align: left;
+
 	@include media-query($laptop) {
 		font-size: .75rem;
 		line-height: 1.5em;
+		height: 90vh;
+		min-height: 20em;
+
+		& .preview-parent, .info-parent{
+			position: relative;
+			height: 90vh;			
+		}
+
+		& .info{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		& .preview{
+			height: 100%;
+			max-width: none;
+			position: absolute;
+			right: 0;
+		}
+
+		& .row.-reverse .preview{
+			left: 0;
+		}
 	}
 
-	& .subheader, .text{
-		padding-top: $spacing-unit / 2;
-	}
 	& .subheader{
 		font-size: 1.25em;
 		font-style: italic;
 	}
 	& .text{
 		font-size: .75em;
+		padding-top: $spacing-unit / 2;
 	}
 	& .cta{
 		display: block;
@@ -131,6 +153,7 @@ Components
 			color: $primary-color;
 			font-weight: bold;
 			cursor: pointer;
+			-webkit-appearance: none;
 			&:hover,:active{
 				background: $primary-color;
 				color: $bg-color;
