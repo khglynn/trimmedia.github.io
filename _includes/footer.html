@@ -1,7 +1,9 @@
-<footer class="main-footer" id="contact">
+<footer class="main-footer" id="contact" action="http://formspree.io/admin@trimm.co" method="POST">
   <h2 class="header">Partner with Trimm</h2>
   <p class="text">Big or small project, <span class="u-nowrap">we’d love to hear from you</span></p>
   <form class="contact-form">
+    <input type="hidden" name="_subject" value="New contact form submission!" />
+    <input type="text" name="_gotcha" style="display:none" />
     <p>
       <label for="name">Name</label>
       <input type="text" name="name" id="name" placeholder="Ginger Snickerdoodle"/>
@@ -12,7 +14,7 @@
     </p>
     <p>
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="joke@gmail.com"/>
+      <input type="email" name="_replyto" id="email" placeholder="joke@gmail.com"/>
     </p>
     <p>
       <label for="info">Anything Else?</label>
@@ -20,7 +22,7 @@
     </p>
     <input type="submit" value="Send us your info!"/>
   </form>
-  <p class="text">If you need to get in touch. Email us:</p>
+  <p class="text">If you need to get in touch, email us:</p>
   <a class="cta" href="">hello@trim.media</a>
   <span class="copyright">© Trim Media LLC 2015</span>
 </footer>

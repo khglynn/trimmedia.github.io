@@ -166,11 +166,11 @@ Components
     text-align: center;
     font-size: .75em;
     font-weight: bold;
-    color: inherit;
+    color: #7ec3e1;
     border-radius: 2em;
-    border: 2px solid #31332e; }
+    border: 2px solid #7ec3e1; }
     .project-item .cta:hover, .project-item .cta :active {
-      background: #31332e;
+      background: #7ec3e1;
       color: #fafafa; }
   @media screen and (min-width: 600px) {
     .project-item {
@@ -200,9 +200,9 @@ Components
       .project-item .row.-reverse .preview {
         left: 0; }
         .project-item .row.-reverse .preview:hover {
-          -webkit-transform: translateX(-10%) rotate(-5deg);
-              -ms-transform: translateX(-10%) rotate(-5deg);
-                  transform: translateX(-10%) rotate(-5deg); } }
+          -webkit-transform: translateX(-10%) rotate(5deg);
+              -ms-transform: translateX(-10%) rotate(5deg);
+                  transform: translateX(-10%) rotate(5deg); } }
   @media screen and (min-width: 900px) {
     .project-item .preview-parent, .project-item .info-parent {
       height: 780px; } }
