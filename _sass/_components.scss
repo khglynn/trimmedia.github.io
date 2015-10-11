@@ -3,11 +3,13 @@ Components
 */
 
 .main-header{
+	position: relative;
+
 	> .logo{
 		width: 50%;
 		max-width: 10rem;
 		padding-top: $spacing-unit;
-		@include media-query($laptop){
+		@include media-query($laptop) {
 			padding-top: $spacing-unit * 2;
 		}
 	}
@@ -24,6 +26,19 @@ Components
 		font-size: .875em;
 		line-height: $line-height;
 		font-weight: lighter;
+	}
+
+	> .flourish{
+		display: none;
+		max-height: 680px;
+		max-width: none;
+		@include media-query($laptop) {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(50%) translateX(-100%);
+		}
 	}
 }
 
@@ -115,7 +130,8 @@ Components
 
 .main-footer{
 	padding-top: $spacing-unit * 2;
-	padding-bottom: $spacing-unit;
+	padding-bottom: $spacing-unit * 1.25;
+	position: relative;
 	
 	> .header, .text{font-weight: normal;}
 
@@ -141,12 +157,32 @@ Components
 		font-size: .625em;
 		color: #9f9f9f;
 	}
+	> .flourish{
+		display: none;
+		max-width: none;
+		@include media-query($laptop) {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			&.-milk{
+				max-height: 682px;
+				left: 0;
+				transform: translateX(-80%);
+			}
+			&.-crumbs{
+				max-height: 370px;
+				right: 0;
+				transform: translateX(60%);
+			}
+		}
+	}
 }
 
 .contact-form{
 	font-size: .625em;
 	max-width: 20rem;
 	margin: 0 auto;
+	position: relative;
 
 	& label{
 		display: block;
@@ -184,6 +220,35 @@ Components
 			&:hover,:active{
 				background: $primary-color;
 				color: $bg-color;
+			}
+		}
+	}
+
+	> .flourish{
+		max-width: none;
+		position: absolute;
+
+		&.-pen{
+			display: none;
+		}
+		&.-headphones{
+			display: block;
+			max-height: 350px;
+			top: 0;
+			right: 0;
+			transform: translate(35%, -75%);
+		}
+
+		@include media-query($laptop) {
+			&.-pen{
+				display: block;
+				max-height: 390px;
+				top: 0;
+				right: 0;
+				transform: translate(150%, 0%);
+			}
+			&.-headphones{
+				display: none;
 			}
 		}
 	}
