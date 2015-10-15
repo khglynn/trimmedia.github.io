@@ -5,10 +5,9 @@ Components
 body.flourish{
 	background: url("../assets/img/glasses.png");
 	background-repeat: no-repeat;
-	background-size: 200px;
-	background-position: 100% -2%;
+	background-size: 300px;
+	background-position: 100% -3%;
 	@include media-query($tablet) {
-		background-size: 300px;
 		background-position: 95% -3%;
 	}
 	@include media-query($laptop) {
@@ -264,7 +263,7 @@ body.flourish{
 			max-height: 350px;
 			top: 0;
 			right: 0;
-			transform: translate(35%, -72.5%);
+			transform: translate(50%, -70%);
 		}
 
 		@include media-query($tablet){

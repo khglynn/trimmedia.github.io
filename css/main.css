@@ -114,11 +114,10 @@ Components
 body.flourish {
   background: url("../assets/img/glasses.png");
   background-repeat: no-repeat;
-  background-size: 200px;
-  background-position: 100% -2%; }
+  background-size: 300px;
+  background-position: 100% -3%; }
   @media screen and (min-width: 600px) {
     body.flourish {
-      background-size: 300px;
       background-position: 95% -3%; } }
   @media screen and (min-width: 900px) {
     body.flourish {
@@ -327,9 +326,9 @@ body.flourish {
       max-height: 350px;
       top: 0;
       right: 0;
-      -webkit-transform: translate(35%, -72.5%);
-          -ms-transform: translate(35%, -72.5%);
-              transform: translate(35%, -72.5%); }
+      -webkit-transform: translate(50%, -70%);
+          -ms-transform: translate(50%, -70%);
+              transform: translate(50%, -70%); }
     @media screen and (min-width: 600px) {
       .contact-form > .flourish.-headphones {
         -webkit-transform: translate(40%, -80%);
