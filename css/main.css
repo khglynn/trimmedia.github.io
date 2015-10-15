@@ -49,13 +49,6 @@ body {
   color: #31332e;
   text-align: center;
   overflow-x: hidden; }
-  @media screen and (min-width: 900px) {
-    body {
-      background: url("../assets/img/glasses.png");
-      background-size: 400px;
-      background-repeat: no-repeat;
-      background-position-x: 80%;
-      background-position-y: -4%; } }
 
 h1, h2, h3 {
   font-family: "kepler-std-display", serif; }
@@ -118,20 +111,36 @@ Objects
 /* 
 Components
 */
+body.flourish {
+  background: url("../assets/img/glasses.png");
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: 100% -2%; }
+  @media screen and (min-width: 600px) {
+    body.flourish {
+      background-size: 300px;
+      background-position: 95% -3%; } }
+  @media screen and (min-width: 900px) {
+    body.flourish {
+      background-size: 400px;
+      background-position: 80% -4%; } }
+
 .main-header {
   position: relative; }
   .main-header > .logo {
     width: 50%;
     max-width: 10rem;
-    padding-top: 2.5rem; }
-    @media screen and (min-width: 900px) {
-      .main-header > .logo {
-        padding-top: 5rem; } }
+    padding-top: 5rem; }
+    .main-header > .logo.-small {
+      padding-top: 2.5rem;
+      width: 30%; }
   .main-header > .title {
     font-size: 2.25em;
     line-height: 1em;
     font-weight: normal;
     padding-top: 2.5rem; }
+    .main-header > .title + .cta {
+      padding-top: 1.25rem; }
   .main-header > .subtitle {
     padding: 0 1em;
     padding-top: 2.5rem;
@@ -159,13 +168,13 @@ Components
 .project-item {
   text-align: left; }
   .project-item .preview-parent {
-    height: 390px;
+    height: 585px;
     position: relative; }
   .project-item .preview {
     height: 100%;
     max-width: none;
     position: absolute;
-    left: 0; }
+    left: -40%; }
   .project-item .subheader {
     font-size: 1.25em;
     font-style: italic; }
@@ -189,7 +198,9 @@ Components
     .project-item {
       font-size: .75rem;
       line-height: 1.5em; }
-      .project-item .preview-parent, .project-item .info-parent {
+      .project-item .preview-parent {
+        left: 0; }
+      .project-item .info-parent {
         position: relative;
         height: 585px; }
       .project-item .info {
@@ -265,10 +276,13 @@ Components
                   transform: translateX(60%); } }
 
 .contact-form {
-  font-size: .625em;
+  font-size: .75em;
   max-width: 20rem;
   margin: 0 auto;
   position: relative; }
+  @media screen and (min-width: 900px) {
+    .contact-form {
+      font-size: .625em; } }
   .contact-form label {
     display: block;
     padding-top: 1.25rem;
@@ -313,9 +327,14 @@ Components
       max-height: 350px;
       top: 0;
       right: 0;
-      -webkit-transform: translate(35%, -75%);
-          -ms-transform: translate(35%, -75%);
-              transform: translate(35%, -75%); }
+      -webkit-transform: translate(35%, -72.5%);
+          -ms-transform: translate(35%, -72.5%);
+              transform: translate(35%, -72.5%); }
+    @media screen and (min-width: 600px) {
+      .contact-form > .flourish.-headphones {
+        -webkit-transform: translate(40%, -80%);
+            -ms-transform: translate(40%, -80%);
+                transform: translate(40%, -80%); } }
     @media screen and (min-width: 900px) {
       .contact-form > .flourish.-pen {
         display: block;

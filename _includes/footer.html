@@ -1,7 +1,7 @@
-<footer class="main-footer" action="http://formspree.io/admin@trimm.co" method="POST">
+<footer class="main-footer" id="contact">
   <h2 class="header">Partner with Trimm</h2>
   <p class="text">Big or small project, <span class="u-nowrap">we’d love to hear from you</span></p>
-  <form class="contact-form">
+  <form class="contact-form" action="http://formspree.io/admin@trimm.co" method="POST">
     <img src="assets/img/pen.png" class="flourish -pen">
     <img src="assets/img/headphones.png" class="flourish -headphones">
     <p>
@@ -10,16 +10,18 @@
     </p>
     <p>
       <label for="phone">Phone Number</label>
-      <input type="phone" name="phone" id="phone" placeholder="1-800-MIXALOT"/>
+      <input type="phone" name="phone" id="phone" placeholder="1-800-COOKIES"/>
     </p>
     <p>
       <label for="email">Email</label>
-      <input type="email" name="_replyto" id="email" placeholder="joke@gmail.com"/>
+      <input type="email" name="_replyto" id="email" placeholder="doublestuff@oreo.com"/>
     </p>
     <p>
       <label for="info">Anything Else?</label>
-      <textarea id="info" placeholder="website url, twitter bio, your favorite cookie"></textarea>
+      <textarea id="info" name="message" placeholder="website url, twitter bio, your favorite cookie"></textarea>
     </p>
+    <input type="hidden" name="_next" value="/thanks.html" />
+    <input type="hidden" name="_subject" value="New Trimm Site Submission!" />
     <input type="submit" value="Send us your info!"/>
   </form>
   <p class="text">If you need to get in touch, email us:</p>

@@ -11,7 +11,9 @@ layout: default
       <div class="row">
       {% endif %}
         <div class="column two-thirds preview-parent">
-          <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
+          <a href="{{ project.url }}">
+            <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
+          </a>
         </div>
         <div class="column third info-parent">
           <div class="info">

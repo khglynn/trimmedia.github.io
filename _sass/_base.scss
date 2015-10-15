@@ -11,14 +11,6 @@ body{
 	color: $text-color;
 	text-align: center;
 	overflow-x: hidden;
-
-	@include media-query($laptop) {
-		background: url("../assets/img/glasses.png");
-		background-size: 400px;
-		background-repeat: no-repeat;
-		background-position-x: 80%;
-		background-position-y: -4%;
-	}
 }
 
 h1, h2, h3{
