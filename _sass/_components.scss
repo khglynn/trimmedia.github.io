@@ -78,6 +78,7 @@ body.flourish{
 		max-width: none;
 		position: absolute;
 		left: -40%;
+		transition: transform .6s ease;
 	}
 
 	& .subheader{
@@ -130,15 +131,14 @@ body.flourish{
 			position: absolute;
 			right: 0;
 			left: auto;
-			transition: transform .6s ease;
-			&:hover{
+			&.-in-focus{
 				transform: translateX(10%) rotate(5deg);
 			}
 		}
 
 		& .row.-reverse .preview{
 			left: 0;
-			&:hover{
+			&.-in-focus{
 				transform: translateX(-10%) rotate(5deg);
 			}
 		}

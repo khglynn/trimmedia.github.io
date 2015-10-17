@@ -173,7 +173,9 @@ body.flourish {
     height: 100%;
     max-width: none;
     position: absolute;
-    left: -40%; }
+    left: -40%;
+    -webkit-transition: -webkit-transform 0.6s ease;
+            transition: transform 0.6s ease; }
   .project-item .subheader {
     font-size: 1.25em;
     font-style: italic; }
@@ -213,16 +215,14 @@ body.flourish {
         max-width: none;
         position: absolute;
         right: 0;
-        left: auto;
-        -webkit-transition: -webkit-transform 0.6s ease;
-                transition: transform 0.6s ease; }
-        .project-item .preview:hover {
+        left: auto; }
+        .project-item .preview.-in-focus {
           -webkit-transform: translateX(10%) rotate(5deg);
               -ms-transform: translateX(10%) rotate(5deg);
                   transform: translateX(10%) rotate(5deg); }
       .project-item .row.-reverse .preview {
         left: 0; }
-        .project-item .row.-reverse .preview:hover {
+        .project-item .row.-reverse .preview.-in-focus {
           -webkit-transform: translateX(-10%) rotate(5deg);
               -ms-transform: translateX(-10%) rotate(5deg);
                   transform: translateX(-10%) rotate(5deg); } }
