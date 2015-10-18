@@ -1,9 +1,19 @@
 window.addEventListener('load',function(){
-	console.log(window.pageYOffset);
 
 	var list = document.querySelector(".project-list");
 	var previews = list.querySelectorAll(".preview");
+	var form = document.querySelector(".contact-form");
 	var didScroll = false;
+
+	form.addEventListener('submit', function(event) {
+	  event.preventDefault();
+
+	  ga('send', 'event', 'Contact Form', 'submit', {
+	    hitCallback: function() {
+	      form.submit();
+	    }
+	  });
+	});
 
 	function checkScroll() {
 	    didScroll = true;
@@ -29,4 +39,5 @@ window.addEventListener('load',function(){
 	}
 
 	window.addEventListener('scroll', checkScroll);
+
 });
