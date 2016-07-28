@@ -1,4 +1,4 @@
-/* 
+/*
 Components
 */
 
@@ -116,7 +116,7 @@ body.flourish{
 
 		& .info-parent{
 			position: relative;
-			height: 585px;			
+			height: 585px;
 		}
 
 		& .info{
@@ -146,7 +146,7 @@ body.flourish{
 
 	@include media-query($laptop) {
 		& .preview-parent, .info-parent{
-			height: 780px;			
+			height: 780px;
 		}
 	}
 }
@@ -155,7 +155,7 @@ body.flourish{
 	padding-top: $spacing-unit * 2;
 	padding-bottom: $spacing-unit * 1.25;
 	position: relative;
-	
+
 	> .header, .text{font-weight: normal;}
 
 	> .header{
@@ -237,7 +237,7 @@ body.flourish{
 		}
 
 		&[type='submit']{
-			margin-top: $spacing-unit / 2; 
+			margin-top: $spacing-unit / 2;
 			background: $bg-color;
 			border-color: $primary-color;
 			color: $primary-color;
@@ -250,6 +250,11 @@ body.flourish{
 			}
 		}
 	}
+
+    & textarea{
+        resize: none;
+        border-radius: $border-radius/2;
+    }
 
 	> .flourish{
 		max-width: none;
@@ -286,7 +291,3 @@ body.flourish{
 		}
 	}
 }
-
-
-
-

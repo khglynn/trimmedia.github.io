@@ -59,8 +59,7 @@ ul {
 a {
   text-decoration: none;
   color: #d24444;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all .3s ease;
   display: inline-block; }
   a:hover, a:focus {
     color: #a22727; }
@@ -108,7 +107,7 @@ Objects
   .row.-reverse > .column {
     float: right; } }
 
-/* 
+/*
 Components
 */
 body.flourish {
@@ -174,8 +173,8 @@ body.flourish {
     max-width: none;
     position: absolute;
     left: -40%;
-    -webkit-transition: -webkit-transform 0.6s ease;
-            transition: transform 0.6s ease; }
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease; }
   .project-item .subheader {
     font-size: 1.25em;
     font-style: italic; }
@@ -185,7 +184,7 @@ body.flourish {
   .project-item .cta {
     display: inline-block;
     margin-top: 1.25rem;
-    padding: 0.15em 1.5em;
+    padding: .15em 1.5em;
     text-align: center;
     font-size: .75em;
     font-weight: bold;
@@ -297,10 +296,8 @@ body.flourish {
     font-size: inherit;
     background-color: #e6e6e6;
     border: 2px solid transparent;
-    -webkit-transition: .3s ease;
-            transition: .3s ease;
-    -webkit-transition-property: background border;
-            transition-property: background border; }
+    transition: .3s ease;
+    transition-property: background border; }
     .contact-form input:focus, .contact-form textarea:focus {
       outline: none;
       border-color: #7ec3e1;
@@ -316,6 +313,9 @@ body.flourish {
       .contact-form input[type='submit']:hover, .contact-form input[type='submit'] :active, .contact-form textarea[type='submit']:hover, .contact-form textarea[type='submit'] :active {
         background: #d24444;
         color: #fafafa; }
+  .contact-form textarea {
+    resize: none;
+    border-radius: 1em; }
   .contact-form > .flourish {
     max-width: none;
     position: absolute; }

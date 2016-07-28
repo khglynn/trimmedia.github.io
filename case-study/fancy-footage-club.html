@@ -1,0 +1,20 @@
+---
+layout: case-study
+
+project: Fancy Footage Club
+code: ffc
+
+title: 'Fancy Footage Club'
+intro: 'This is an introduction to this case study'
+img_path: {{ site.base_url }}/assets/{{ page.code }}/header.jpg
+img_desc: 'Header image for {{ page.project }}'
+sections:
+- heading: 'test'
+  body: 'test body'
+
+---
+
+<h1>{{ page.title }}</h1>
+<h3>{{ page.intro }}</h3>
+<img src='{{ page.img_path }}'
+     alt='{{ page.img_desc }}'>
