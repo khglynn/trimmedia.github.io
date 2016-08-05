@@ -25,8 +25,6 @@ window.addEventListener('load',function(){
 	        for (var i = 0; i < previews.length; i++) {
 				var bounds = previews[i].getBoundingClientRect();
 				if(isInViewport(bounds)){
-                    console.log(bounds, window.pageYOffset);
-                    console.log('in focus!');
 					previews[i].classList.add("-in-focus");
 				}
                 else{

@@ -443,3 +443,21 @@ Trumps & Hacks
 
 .fw800 {
   font-weight: 800; }
+
+.txt-l {
+  text-align: left; }
+
+.txt-c {
+  text-align: center; }
+
+.txt-r {
+  text-align: right; }
+
+.rotate2 {
+  -webkit-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg); }
+  .rotate2-neg {
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg); }

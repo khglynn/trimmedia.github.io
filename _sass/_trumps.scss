@@ -83,3 +83,24 @@ Trumps & Hacks
         }
     }
 }
+
+.txt{
+    &-l{
+        text-align: left;
+    }
+    &-c{
+        text-align: center;
+    }
+    &-r{
+        text-align: right;
+    }
+}
+
+.rotate{
+    &2{
+        transform: rotate(2deg);
+        &-neg{
+            transform: rotate(-2deg);
+        }
+    }
+}
