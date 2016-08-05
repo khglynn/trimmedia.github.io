@@ -1,58 +1,54 @@
 ---
 layout: default
 ---
-<div class="project-list">
+<section id="projects" class="project-list">
     {% for project in site.data.projects %}
-    <section class="project-item">
-      {% assign loopindex = forloop.index | modulo: 2 %}
-      {% if loopindex == 1 %}
-      <div class="row -reverse">
-      {% else %}
-      <div class="row">
-      {% endif %}
-        <div class="column two-thirds preview-parent">
-          <a href="{{ project.url }}">
-            <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
-          </a>
-        </div>
-        <div class="column third info-parent">
-          <div class="info">
-            <h3 class="subheader">{{ project.name }}</h2>
-            <p class="text">{{ project.blurb }}</p>
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        <section class="project-item">
+            {% if loopindex == 1 %}<div class="row -reverse">{% else %}<div class="row">{% endif %}
+                <div class="column two-thirds preview-parent">
+                    <a href="{{ project.url }}">
+                        <img class="preview" src="assets/img/{{ project.code }}.preview.png" alt="{{ project.name }} project preview">
+                    </a>
+                </div>
+                <div class="column third info-parent">
+                    <div class="info">
+                        <h3 class="subheader">{{ project.name }}</h2>
+                        <p class="text">{{ project.blurb }}</p>
+                        <a href="{{ project.url }}" class="btn" target="_blank"
+                        onclick="ga('send', 'event', 'Projects', 'click', '{{ project.name }}');">
+                          Learn More
+                        </a>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+        </section><!-- end .project-item -->
+    {% endfor %}
+</section><!-- end .project-list -->
+<section id="team" class="pt3">
+    <h2 class="f5 fw400">Your Design Team</h2>
+    <div class="row txt-l">
+        <div class="column third mt2">
+            <img class="rotate2-neg" src="assets/img/kevinpolo.png" alt="Photo of Kevin Halladay-Glynn">
+            <h3 class="subheader mt1">Kevin Halladay-Glynn</h2>
+            <p class="text">
+                Kevin is our in-house idea-to-design powerhouse. He somehow also keeps all our business plates spinning.
+            </p>
             <a href="{{ project.url }}" class="btn" target="_blank"
             onclick="ga('send', 'event', 'Projects', 'click', '{{ project.name }}');">
-              Learn More
+              Explore Portfolio
             </a>
-          </div>
         </div>
-      </div><!-- end .row -->
-    </section><!-- end .project-item -->
-    {% endfor %}
-    <section id="team" class="mt2">
-        <h2 class="f5 fw400">Your Design Team</h2>
-        <div class="row txt-l">
-            <div class="column third mt2">
-                <img class="rotate2-neg" src="assets/img/kevinpolo.png" alt="Photo of Kevin Halladay-Glynn">
-                <h3 class="subheader mt1">Kevin Halladay-Glynn</h2>
-                <p class="text">
-                    Kevin is our in-house idea-to-design powerhouse. He somehow also keeps all our business plates spinning.
-                </p>
-                <a href="{{ project.url }}" class="btn" target="_blank"
-                onclick="ga('send', 'event', 'Projects', 'click', '{{ project.name }}');">
-                  Explore Portfolio
-                </a>
-            </div>
-            <div class="column third offset--third mt2">
-                <img class="rotate2" src="assets/img/andrewpolo.png" alt="Photo of Andrew Nater">
-                <h3 class="subheader mt1">Andrew Nater</h2>
-                <p class="text">
-                    Identifying goals, designing interfaces, tinkering with code, and solving problems. Andrew is our lightning fast developer-in-chief.
-                </p>
-                <a href="{{ project.url }}" class="btn" target="_blank"
-                onclick="ga('send', 'event', 'Projects', 'click', '{{ project.name }}');">
-                  Explore Portfolio
-                </a>
-            </div>
+        <div class="column third offset--third mt2">
+            <img class="rotate2" src="assets/img/andrewpolo.png" alt="Photo of Andrew Nater">
+            <h3 class="subheader mt1">Andrew Nater</h2>
+            <p class="text">
+                Identifying goals, designing interfaces, tinkering with code, and solving problems. Andrew is our lightning fast developer-in-chief.
+            </p>
+            <a href="{{ project.url }}" class="btn" target="_blank"
+            onclick="ga('send', 'event', 'Projects', 'click', '{{ project.name }}');">
+              Explore Portfolio
+            </a>
         </div>
-    </section>
-</div><!-- end .project-list -->
+    </div>
+</section>
