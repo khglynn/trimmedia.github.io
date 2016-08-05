@@ -1,5 +1,5 @@
-/* 
-Base 
+/*
+Base
 */
 html{
 	overflow: hidden;
@@ -15,6 +15,12 @@ body{
 
 h1, h2, h3{
 	font-family: $font-title;
+}
+
+.header{
+    font-size: 1.75em;
+    line-height: 1em;
+    font-weight: normal;
 }
 
 ul{

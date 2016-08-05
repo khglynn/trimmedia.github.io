@@ -25,8 +25,11 @@ window.addEventListener('load',function(){
 	        for (var i = 0; i < previews.length; i++) {
 				var bounds = previews[i].getBoundingClientRect();
 				if(isInViewport(bounds)){
+                    console.log(bounds, window.pageYOffset);
+                    console.log('in focus!');
 					previews[i].classList.add("-in-focus");
-				}else{
+				}
+                else{
 					previews[i].classList.remove("-in-focus");
 				}
 			}
@@ -35,7 +38,8 @@ window.addEventListener('load',function(){
 
 	function isInViewport(e){
 		var offset = window.pageYOffset;
-		return offset > (e.top + offset) - (window.innerHeight * .5) && window.pageYOffset < (e.bottom + offset);
+		return offset > (e.top + offset) - (window.innerHeight * .1)
+            && offset < (e.bottom + offset) - (window.innerHeight * .5);
 	}
 
 	window.addEventListener('scroll', checkScroll);

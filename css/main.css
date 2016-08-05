@@ -37,8 +37,8 @@ button {
     button {
       font-size: 30px; } }
 
-/* 
-Base 
+/*
+Base
 */
 html {
   overflow: hidden;
@@ -52,6 +52,11 @@ body {
 
 h1, h2, h3 {
   font-family: "kepler-std-display", serif; }
+
+.header {
+  font-size: 1.75em;
+  line-height: 1em;
+  font-weight: normal; }
 
 ul {
   list-style-type: none; }
@@ -67,7 +72,7 @@ a {
 img {
   max-width: 100%; }
 
-/* 
+/*
 Objects
 */
 .container {
@@ -104,8 +109,29 @@ Objects
       width: 33.3%; }
     .row > .column.fourth {
       width: 25%; }
+  .row > .offset--two-thirds {
+    margin-left: 66.7%; }
+  .row > .offset--half {
+    margin-left: 50%; }
+  .row > .offset--third {
+    margin-left: 33.3%; }
+  .row > .offset--fourth {
+    margin-left: 25%; }
   .row.-reverse > .column {
     float: right; } }
+
+.btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: .15em 1.5em;
+  font-size: .75em;
+  font-weight: bold;
+  color: #7ec3e1;
+  border-radius: 2em;
+  border: 2px solid #7ec3e1; }
+  .btn:hover, .btn:active {
+    background: #7ec3e1;
+    color: #fafafa; }
 
 /*
 Components
@@ -181,19 +207,6 @@ body.flourish {
   .project-item .text {
     font-size: .75em;
     padding-top: 1.25rem; }
-  .project-item .cta {
-    display: inline-block;
-    margin-top: 1.25rem;
-    padding: .15em 1.5em;
-    text-align: center;
-    font-size: .75em;
-    font-weight: bold;
-    color: #7ec3e1;
-    border-radius: 2em;
-    border: 2px solid #7ec3e1; }
-    .project-item .cta:hover, .project-item .cta :active {
-      background: #7ec3e1;
-      color: #fafafa; }
   @media screen and (min-width: 600px) {
     .project-item {
       font-size: .75rem;
@@ -228,6 +241,24 @@ body.flourish {
   @media screen and (min-width: 900px) {
     .project-item .preview-parent, .project-item .info-parent {
       height: 780px; } }
+
+#team .subheader {
+  font-size: 1.25em;
+  font-style: italic;
+  text-align: left; }
+
+#team .text {
+  font-size: .75em;
+  padding-top: 1.25rem;
+  text-align: left; }
+
+#team .btn {
+  text-align: left; }
+
+@media screen and (min-width: 600px) {
+  #team {
+    font-size: .75rem;
+    line-height: 1.5em; } }
 
 .main-footer {
   padding-top: 5rem;
@@ -346,9 +377,69 @@ body.flourish {
       .contact-form > .flourish.-headphones {
         display: none; } }
 
-/* 
-Trumps & Hacks 
+/*
+Trumps & Hacks
 */
 @media screen and (min-width: 900px) {
   .u-nowrap {
     white-space: nowrap; } }
+
+.pt1 {
+  padding-top: 1.25rem; }
+
+.pt2 {
+  padding-top: 2.5rem; }
+
+.pt3 {
+  padding-top: 5rem; }
+
+.pt4 {
+  padding-top: 10rem; }
+
+.pt5 {
+  padding-top: 20rem; }
+
+.mt1 {
+  margin-top: 1.25rem; }
+
+.mt2 {
+  margin-top: 2.5rem; }
+
+.mt3 {
+  margin-top: 5rem; }
+
+.mt4 {
+  margin-top: 10rem; }
+
+.mt5 {
+  margin-top: 20rem; }
+
+.f1 {
+  font-size: .875rem; }
+
+.f2 {
+  font-size: 1rem; }
+
+.f3 {
+  font-size: 1.25rem; }
+
+.f4 {
+  font-size: 1.5rem; }
+
+.f5 {
+  font-size: 2.25rem; }
+
+.f6 {
+  font-size: 3rem; }
+
+.fw200 {
+  font-weight: 200; }
+
+.fw400 {
+  font-weight: 400; }
+
+.fw600 {
+  font-weight: 600; }
+
+.fw800 {
+  font-weight: 800; }

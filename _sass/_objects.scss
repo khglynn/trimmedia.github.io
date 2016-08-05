@@ -1,4 +1,4 @@
-/* 
+/*
 Objects
 */
 
@@ -32,22 +32,41 @@ Objects
     	> .column{
     		float: left;
     		&.full { width: 100%; }
-	  		&.two-thirds { width: 66.7%; }
+            &.two-thirds { width: 66.7%; }
 			&.half { width: 50%; }
 			&.third { width: 33.3%; }
-			&.fourth { width: 25%; }	
+			&.fourth { width: 25%; }
     	}
 
-    	&.-reverse{ 
+        > .offset{
+            &--two-thirds { margin-left: 66.7%; }
+			&--half { margin-left: 50%; }
+			&--third { margin-left: 33.3%; }
+			&--fourth { margin-left: 25%; }
+        }
+
+    	&.-reverse{
 			> .column{
-				float: right; 
+				float: right;
 			}
 		}
 	}
 
 }
 
+.btn{
+    display: inline-block;
+    margin-top: $spacing-unit / 2;
+    padding: .15em 1.5em;
+    font-size: .75em;
+    font-weight: bold;
+    color: $secondary-color;
+    border-radius: $border-radius;
+    border: 2px solid $secondary-color;
 
-
-
-
+    &:hover,
+    &:active{
+        background: $secondary-color;
+        color: $bg-color;
+    }
+}
