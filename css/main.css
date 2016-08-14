@@ -22,7 +22,7 @@ button {
   font-size: 20px;
   font-weight: lighter;
   line-height: 1.5em; }
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     html,
     form,
     input,
@@ -79,7 +79,7 @@ Objects
   width: 90%;
   max-width: 1000px;
   margin: 0 auto; }
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     .container {
       width: 80%; } }
   @media screen and (min-width: 45em) {
@@ -96,7 +96,7 @@ Objects
 .row:after {
   clear: both; }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 36em) {
   .row > .column {
     float: left; }
     .row > .column.full {
@@ -141,7 +141,7 @@ body.flourish {
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: 100% -2.5%; }
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     body.flourish {
       background-position: 95% -3%; } }
   @media screen and (min-width: 45em) {
@@ -207,7 +207,7 @@ body.flourish {
   .project-item .text {
     font-size: .75em;
     padding-top: 1.25rem; }
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     .project-item {
       font-size: .75rem;
       line-height: 1.5em; }
@@ -255,7 +255,13 @@ body.flourish {
 #team .btn {
   text-align: left; }
 
-@media screen and (min-width: 30em) {
+#team .polaroid {
+  width: 100%;
+  max-width: 333px;
+  margin: 0 auto;
+  display: block; }
+
+@media screen and (min-width: 36em) {
   #team {
     font-size: .75rem;
     line-height: 1.5em; } }

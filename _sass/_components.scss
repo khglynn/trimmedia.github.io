@@ -152,6 +152,13 @@ body.flourish{
         text-align: left;
     }
 
+    & .polaroid{
+        width: 100%;
+        max-width: 333px;
+        margin: 0 auto;
+        display: block;
+    }
+
     @include media-query($tablet) {
 		font-size: .75rem;
 		line-height: 1.5em;
