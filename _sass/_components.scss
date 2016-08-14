@@ -6,13 +6,13 @@ body.flourish{
 	background: url("../assets/img/glasses.png");
 	background-repeat: no-repeat;
 	background-size: 300px;
-	background-position: 100% -3%;
+	background-position: 100% -2.5%;
 	@include media-query($tablet) {
 		background-position: 95% -3%;
 	}
 	@include media-query($laptop) {
 		background-size: 400px;
-		background-position: 80% -4%;
+		background-position: 80% -3%;
 	}
 }
 
@@ -141,7 +141,7 @@ body.flourish{
 		font-style: italic;
         text-align: left;
 	}
-    
+
 	& .text{
 		font-size: .75em;
 		padding-top: $spacing-unit / 2;

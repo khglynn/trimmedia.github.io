@@ -140,14 +140,14 @@ body.flourish {
   background: url("../assets/img/glasses.png");
   background-repeat: no-repeat;
   background-size: 300px;
-  background-position: 100% -3%; }
+  background-position: 100% -2.5%; }
   @media screen and (min-width: 30em) {
     body.flourish {
       background-position: 95% -3%; } }
   @media screen and (min-width: 45em) {
     body.flourish {
       background-size: 400px;
-      background-position: 80% -4%; } }
+      background-position: 80% -3%; } }
 
 .main-header {
   position: relative; }
@@ -182,7 +182,9 @@ body.flourish {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateY(50%) translateX(-100%); } }
+        -webkit-transform: translateY(50%) translateX(-100%);
+            -ms-transform: translateY(50%) translateX(-100%);
+                transform: translateY(50%) translateX(-100%); } }
 
 .project-list {
   padding-top: 2.5rem; }
@@ -197,6 +199,7 @@ body.flourish {
     max-width: none;
     position: absolute;
     left: -40%;
+    transition: -webkit-transform .6s ease;
     transition: transform .6s ease; }
   .project-item .subheader {
     font-size: 1.25em;
@@ -216,7 +219,9 @@ body.flourish {
       .project-item .info {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%); }
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
       .project-item .preview {
         height: 100%;
         max-width: none;
@@ -224,11 +229,15 @@ body.flourish {
         right: 0;
         left: auto; }
         .project-item .preview.-in-focus {
-          transform: translateX(10%) rotate(5deg); }
+          -webkit-transform: translateX(10%) rotate(5deg);
+              -ms-transform: translateX(10%) rotate(5deg);
+                  transform: translateX(10%) rotate(5deg); }
       .project-item .row.-reverse .preview {
         left: 0; }
         .project-item .row.-reverse .preview.-in-focus {
-          transform: translateX(-10%) rotate(5deg); } }
+          -webkit-transform: translateX(-10%) rotate(5deg);
+              -ms-transform: translateX(-10%) rotate(5deg);
+                  transform: translateX(-10%) rotate(5deg); } }
   @media screen and (min-width: 45em) {
     .project-item .preview-parent, .project-item .info-parent {
       height: 780px; } }
@@ -285,11 +294,15 @@ body.flourish {
         .main-footer > .flourish.-milk {
           max-height: 682px;
           left: 0;
-          transform: translateX(-80%); }
+          -webkit-transform: translateX(-80%);
+              -ms-transform: translateX(-80%);
+                  transform: translateX(-80%); }
         .main-footer > .flourish.-crumbs {
           max-height: 370px;
           right: 0;
-          transform: translateX(60%); } }
+          -webkit-transform: translateX(60%);
+              -ms-transform: translateX(60%);
+                  transform: translateX(60%); } }
 
 .contact-form {
   font-size: .75em;
@@ -344,17 +357,23 @@ body.flourish {
       max-height: 350px;
       top: 0;
       right: 0;
-      transform: translate(50%, -70%); }
+      -webkit-transform: translate(50%, -70%);
+          -ms-transform: translate(50%, -70%);
+              transform: translate(50%, -70%); }
     @media screen and (min-width: 30em) {
       .contact-form > .flourish.-headphones {
-        transform: translate(40%, -80%); } }
+        -webkit-transform: translate(40%, -80%);
+            -ms-transform: translate(40%, -80%);
+                transform: translate(40%, -80%); } }
     @media screen and (min-width: 45em) {
       .contact-form > .flourish.-pen {
         display: block;
         max-height: 390px;
         top: 0;
         right: 0;
-        transform: translate(150%, 0%); }
+        -webkit-transform: translate(150%, 0%);
+            -ms-transform: translate(150%, 0%);
+                transform: translate(150%, 0%); }
       .contact-form > .flourish.-headphones {
         display: none; } }
 
@@ -435,8 +454,10 @@ Trumps & Hacks
   text-align: right; }
 
 .rotate2 {
-  transform: rotate(2deg); }
+  -webkit-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg); }
   .rotate2-neg {
-    transform: rotate(-2deg); }
-
-/*# sourceMappingURL=main.css.map */
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg); }
