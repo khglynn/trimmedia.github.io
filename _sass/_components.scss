@@ -271,19 +271,6 @@ body.flourish{
 		&.-pen{
 			display: none;
 		}
-		&.-headphones{
-			display: block;
-			max-height: 350px;
-			top: 0;
-			right: 0;
-			transform: translate(50%, -70%);
-		}
-
-		@include media-query($tablet){
-			&.-headphones{
-				transform: translate(40%, -80%);
-			}
-		}
 
 		@include media-query($laptop) {
 			&.-pen{
@@ -292,9 +279,6 @@ body.flourish{
 				top: 0;
 				right: 0;
 				transform: translate(150%, 0%);
-			}
-			&.-headphones{
-				display: none;
 			}
 		}
 	}

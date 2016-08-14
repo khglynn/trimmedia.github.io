@@ -352,19 +352,6 @@ body.flourish {
     position: absolute; }
     .contact-form > .flourish.-pen {
       display: none; }
-    .contact-form > .flourish.-headphones {
-      display: block;
-      max-height: 350px;
-      top: 0;
-      right: 0;
-      -webkit-transform: translate(50%, -70%);
-          -ms-transform: translate(50%, -70%);
-              transform: translate(50%, -70%); }
-    @media screen and (min-width: 30em) {
-      .contact-form > .flourish.-headphones {
-        -webkit-transform: translate(40%, -80%);
-            -ms-transform: translate(40%, -80%);
-                transform: translate(40%, -80%); } }
     @media screen and (min-width: 45em) {
       .contact-form > .flourish.-pen {
         display: block;
@@ -373,9 +360,7 @@ body.flourish {
         right: 0;
         -webkit-transform: translate(150%, 0%);
             -ms-transform: translate(150%, 0%);
-                transform: translate(150%, 0%); }
-      .contact-form > .flourish.-headphones {
-        display: none; } }
+                transform: translate(150%, 0%); } }
 
 /*
 Trumps & Hacks
