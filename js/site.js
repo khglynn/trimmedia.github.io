@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
 	  var body = field('info') + '\n\n' + field('name') + '\n' + field('phone') + '\n' + field('email');
 	  window.location.href = 'mailto:kevin@trimm.co'
 	    + '?subject=' + encodeURIComponent('Hello from trimm.co')
-	    + '&body=' + encodeURIComponent(body.trim());
+	    + '&body=' + encodeURIComponent(body.trim().replace(/\n/g, '\r\n')); // RFC 6068 wants CRLF
 	});
 
 	function checkScroll() {
